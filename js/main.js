@@ -8,8 +8,6 @@ $(function()
 	$('input[name="search"]').keyup(function()
 	{
 		var string = $('input[name="search"]').val();
-		//clean table
-		result_data.html("");
 		if (string.length > 0)
 		{	
 			message_window.addClass("hide").html("");
@@ -18,6 +16,8 @@ $(function()
 				if (data.length >0 )
 				{
 					result_table.removeClass("hide");
+					//clean table
+		                        result_data.html("");
 					//draw table with data from returned in json object
 					for (var i in data)
 						{
